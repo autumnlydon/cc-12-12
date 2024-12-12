@@ -52,9 +52,14 @@ const solution = (inputStr) => {
   const alpha = "abcdefghijklmnopqrstuvwxyz";
   const alphaArray = [];
   for (let i = 0; i < alpha.length; i++) {
+    // O(1)
     if (!inputStr.includes(alpha[i])) {
-      alphaArray.push(alpha[i]);
+      // O(n)
+      alphaArray.push(alpha[i]); // O(1)
     }
   }
   return alphaArray;
 };
+
+//Time Complexity: O(n) !!! yay!!!
+//Space Complexity: O(1) i think?
